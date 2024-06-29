@@ -1,0 +1,14 @@
+JAVAC = javac
+JAVA = java
+MAIN = main
+SOURCES = color.java main.java
+CLASSES = $(SOURCES:.java=.class)
+
+all: $(MAIN)
+
+$(MAIN): $(SOURCES)
+	$(JAVAC) $(MAIN)
+
+%.class: %.java
+	$(JAVAC) $<
+
